@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Dita ❤️</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #24070d;
+      color: #fff7f8;
+      overflow-x: hidden;
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(145, 25, 55, .35), transparent 35%),
+        radial-gradient(circle at 80% 75%, rgba(105, 13, 37, .4), transparent 38%);
+      pointer-events: none;
+    }
+    .intro { text-align: center; }
+    .small { letter-spacing: 4px; text-transform: uppercase; font-size: 12px; opacity: .75; }
+    h1 {
+      font-size: clamp(42px, 11vw, 88px);
+      margin: 16px 0;
+      line-height: .95;
+      text-shadow: 0 8px 30px rgba(0,0,0,.45);
+    }
+    .subtitle { font-size: 18px; opacity: .86; margin-bottom: 30px; }
+    button {
+      border: 1px solid rgba(255,255,255,.25);
+      background: #7d1732;
+      color: white;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,.3);
+      transition: .25s;
+    }
+    button:hover { transform: translateY(-2px) scale(1.02); background: #941d3d; }
+    .hidden { display: none !important; }
+
+    .content {
+      width: min(940px, 100%);
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .heart { font-size: 44px; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 50% { transform: scale(1.15); } }
+
+    .photo-wrap {
+      width: min(360px, 82vw);
+      aspect-ratio: 3/4;
+      margin: 24px auto;
+      padding: 9px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #d9a0aa, #6f142d);
+      box-shadow: 0 25px 70px rgba(0,0,0,.5);
+      transform: rotate(-1deg);
+    }
+    .photo-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      border-radius: 17px; display: block;
+    }
+    .card {
+      max-width: 720px;
+      margin: 28px auto 0;
+      padding: 30px 25px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+      line-height: 1.9;
+      font-size: 17px;
+    }
+    .card h2 { margin-bottom: 15px; font-size: 30px; }
+    .signature { margin-top: 24px; font-style: italic; opacity: .9; }
+    .music {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 20;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      background: #7d1732;
+    }
+    .hint { margin-top: 14px; font-size: 12px; opacity: .6; }
+    .petal {
+      position: fixed;
+      top: -30px;
+      pointer-events: none;
+      z-index: 10;
+      animation: fall linear forwards;
+      opacity: .8;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+    .footer { margin-top: 25px; opacity: .55; font-size: 12px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+  <section class="page" id="opening">
+    <div class="intro">
+      <div class="small">sebuah pesan kecil untuk</div>
+      <h1>Dita ❤️</h1>
+      <div class="subtitle">Ada sesuatu yang ingin aku sampaikan...</div>
+      <button id="openBtn">Buka suratnya 💌</button>
+    </div>
+  </section>
+
+  <main class="page hidden" id="main">
+    <div class="content">
+      <div class="heart">❤️</div>
+      <div class="small">happy birthday</div>
+      <h1>Dhita Fharina</h1>
+
+      <div class="photo-wrap">
+        <img src="dita.jpg" alt="Foto Dita">
+      </div>
+
+      <div class="card">
+        <h2>Selamat ulang tahun, Dita 🎂</h2>
+        <p>
+          Hari ini adalah hari spesial untuk seseorang yang juga sangat spesial.
+          Semoga di umur yang baru ini, semua hal baik datang menghampirimu,
+          langkahmu selalu dimudahkan, dan senyummu selalu punya alasan untuk tetap ada.
+        </p>
+        <p style="margin-top:16px;">
+          Terima kasih sudah menjadi bagian indah dalam hidupku.
+          Semoga kita bisa terus menciptakan banyak cerita, tawa, dan kenangan
+          yang suatu hari nanti akan kita ingat bersama.
+        </p>
+        <p style="margin-top:16px;">
+          Jangan pernah lupa kalau ada seseorang yang selalu ingin melihatmu bahagia.
+          ❤️
+        </p>
+        <div class="signature">— dari seseorang yang sayang sama Dita ❤️</div>
+      </div>
+
+      <div class="footer">made with love, especially for Dita</div>
+    </div>
+  </main>
+
+  <button class="music hidden" id="musicBtn" title="Putar / jeda musik">🎵</button>
+  <audio id="music" loop>
+    <!-- Nanti ganti "musik.mp3" dengan file musik yang kamu kirim -->
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const openBtn = document.getElementById("openBtn");
+    const opening = document.getElementById("opening");
+    const main = document.getElementById("main");
+    const musicBtn = document.getElementById("musicBtn");
+    const music = document.getElementById("music");
+
+    openBtn.addEventListener("click", async () => {
+      opening.classList.add("hidden");
+      main.classList.remove("hidden");
+      musicBtn.classList.remove("hidden");
+
+      try {
+        await music.play();
+        musicBtn.textContent = "⏸️";
+      } catch (e) {
+        musicBtn.textContent = "🎵";
+      }
+
+      for (let i = 0; i < 28; i++) setTimeout(makePetal, i * 90);
+      main.scrollIntoView({ behavior: "smooth" });
+    });
+
+    musicBtn.addEventListener("click", async () => {
+      if (music.paused) {
+        await music.play();
+        musicBtn.textContent = "⏸️";
+      } else {
+        music.pause();
+        musicBtn.textContent = "🎵";
+      }
+    });
+
+    function makePetal() {
+      const el = document.createElement("div");
+      el.className = "petal";
+      el.textContent = Math.random() > .25 ? "♥" : "✦";
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.fontSize = (12 + Math.random() * 16) + "px";
+      el.style.animationDuration = (4 + Math.random() * 4) + "s";
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 8500);
+    }
+  </script>
+</body>
+</html>
